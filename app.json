@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "trello_ruault_kevin",
+    "slug": "trello_ruault_kevin",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "trello_ruault_kevin"
+}
