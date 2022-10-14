@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { UserRouter } from './router/userRouter';
+import { TodoContext } from './context';
+import { TodoRouter } from './router/todoRouter';
+import { styles } from './styles';
 
 export default function App() {
+  const [user, setuser] = useState(null);
+  const [tasks, setTasks] = useState([]);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <TodoContext.Provider value={{ user, setuser, tasks, setTasks }}>
+        <NavigationContainer>
+          {(user) ? <TodoRouter></TodoRouter> : <UserRouter></UserRouter>}
+        </NavigationContainer>
+      </TodoContext.Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

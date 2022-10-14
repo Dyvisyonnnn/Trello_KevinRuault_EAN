@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "trello_ruault_kevin",
-    "slug": "trello_ruault_kevin",
+    "name": "todo-firebase",
+    "slug": "todo-firebase",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "trello_ruault_kevin"
+  "name": "todo-firebase"
 }
